@@ -10,6 +10,9 @@ router.get('/:playername', (req, res, next) => {
 
     console.log(apiURL);
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+
     try {
         request(apiURL,  (error, response, body) => {
             JSONResponse = hiscoresMapper(body);

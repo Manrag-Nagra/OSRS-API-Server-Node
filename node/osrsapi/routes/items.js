@@ -11,6 +11,8 @@ router.get('/:itemname/:pagenum', (req, res, next) => {
 
     console.log(apiURL);
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
     try {
         request(apiURL,  (error, response, body) => {
             returnJSON = itemsMapper(body);
