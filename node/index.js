@@ -4,12 +4,14 @@ const app = express()
 const morgan = require('morgan');
 const itemsRoutes = require('./osrsapi/routes/items');
 const hiscoresRoutes = require('./osrsapi/routes/hiscores');
+const itemsDetailRoutes = require('./osrsapi/routes/itemsDetail');
 
 app.use(morgan('dev'));
 
 //Routes requests
 app.use('/items', itemsRoutes);
 app.use('/hiscores', hiscoresRoutes);
+app.use('/itemsDetail', itemsDetailRoutes);
 
 //Handle errors
 app.use((req, res, next) => {
