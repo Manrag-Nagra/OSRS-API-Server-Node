@@ -7,7 +7,6 @@ This project uses RuneScape API to get the current and latest prices on a item i
 
 
 ## Technologies Used
-* Javascript
 * [ExpressJS](https://expressjs.com/)
 * [Request](https://www.npmjs.com/package/request)
 
